@@ -1,0 +1,129 @@
+<!DOCYYPE html>
+    <html>
+
+    <head>
+    <br>
+    <title>Web Engineering - Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+
+    <!--   Navbar Start-->
+    <header class="navBar">
+
+        <a href="../index.html">
+            <h1 class="title">Web Engineering</h1> <!--Title on the top left-->
+        </a>
+
+        <center>
+            <ul class="navList"> <!--navbar tabs-->
+                <li><a href="../index.html" class="navItem">HTML</a></li>
+                <li><a href="css.html" class="navItem">CSS</a></li>
+                <li><a href="javascript.html" class="navItem">Javascript</a></li>
+                <li><a href="php.html" class="navItem">PHP</a></li>
+                <li>
+                    <div class="dropDown"> <!--dropdown menu-->
+                        <button class="dropBtn"><a href="aboutUs.html">About Us</a></button> <!--about us tab that doubles as a dropdpown menu-->
+                        <div class="dropDownContent">
+                            <a class="dropDownOption" href="https://talalbafarat.github.io/SE371/Exercise1/" target="_blank">Talal Bafarat</a>
+                            <a class="dropDownOption" href="https://noureddin19.github.io/SE371/MyCV.htm" target="_blank">Noureddin Farahat</a>
+                            <a class="dropDownOption" href="https://acnaif.github.io/se371/" target="_blank">Naif Alfirm</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="contactUs.html" class="navItem">Contact Us</a></li>
+            </ul>
+        </center>
+
+    </header> <!--Navbar End-->
+
+    <div class="banner" id="genericBanner"> <!--Banner-->
+    </div>
+
+    <div class="content" id="contactContainer"> <!--Content container-->
+        
+        <h2 class="contentHeader" id="contactHeader1">Contact Us</h2> <!--Form header-->
+
+        <form action="/action_page.php"> <!--Form starts-->
+            <label for="fname">Name</label> <!--Name label-->
+            <input type="text" id="name" name="name" placeholder="Your name.."> <!--Name input-->
+
+            <label for="lname">Email</label> <!--Email label-->
+            <input type="text" id="email" name="email" placeholder="Your email.."> <!--Email input-->
+
+            <label for="country">Country</label> <!--country label-->
+            <select id="country" name="country"> <!--country dropdown-->
+                <option value="saudiArabia">Saudi Arabia</option>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+
+            <label for="subject">Subject</label> <!--subject label-->
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> <!--subject input-->
+
+            <input type="submit" value="Submit" id="submitBtn"> <!--Submit button-->
+        </form> <!--Form ends-->
+        
+        <br>
+
+        <h2 class="contentHeader" id="contactHeader2">Visit Us</h2> <!--Map header-->
+
+        <div class="mapContainer"> <!--Map container-->
+            <iframe class="map" id="PSUmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4035.489000630118!2d46.69826105166595!3d24.73663671450046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0292c1fb5529%3A0x3fbc5cb308e60dd8!2sPrince%20Sultan%20University!5e0!3m2!1sen!2sus!4v1602176073486!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> <!--Map iframe-->
+        </div>
+        
+        <address id="contactAddress">12435 Salahuddin, Riyadh, SA</address> <!--address-->
+
+    </div>
+
+
+    <!--    Footer Start-->
+        <footer>
+
+            <div id="footerContentContainer">
+
+                <a href="https://www.linkedin.com/in/talal-b-94599b11b/" class="fa fa-linkedin fa-2x" target="_blank"></a> <!--LinkedIn Icon-->
+
+                <a href="https://github.com/TalalBafarat" class="fa fa-github fa-2x" target="_blank"></a> <!--Github Icon-->
+
+                <a href="https://twitter.com/TalalBafarat" class="fa fa-twitter fa-2x" target="_blank"></a> <!--Twitter Icon-->
+
+                <a href="https://www.instagram.com/talalbafarat/?hl=en" class="fa fa-instagram fa-2x" target="_blank"></a> <!--Instagram Icon-->
+
+                <br><br>
+
+                <a href="https://mailto:tbafarat@gmail.com" class="footerLink" target="_blank">
+                    <p class="contactLink"><i class="material-icons contactIcons">email</i> <span class="footerContact">tbafarat@gmail.com</span></p> <!--Email Link-->
+                </a>
+
+                <br><br>
+
+                <a href="https://goo.gl/maps/5kfj4DkLz8yGtUocA" class="footerLink" target="_blank">
+                    <p class="contactLink"><i class="material-icons contactIcons">business</i> <span class="footerContact" id="address"><address id="bottomAddress">12435 Salahuddin, Riyadh, SA</address></span></p> <!--Address Link-->
+                </a>
+
+                <br>
+                <hr>
+
+                <p id="copyright">2020 © Copyright by Talal Bafarat. All rights reserved</p> <!--Copyright Claim-->
+
+            </div>
+
+        </footer>
+        <!--    Footer end-->
+
+
+
+
+    </body>
+    <!--Body End-->
+
+    </html>
