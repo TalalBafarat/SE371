@@ -1,0 +1,496 @@
+<!DOCYYPE html>
+    <html>
+
+    <head>
+    <br>
+    <title>Web Engineering - CSS</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+
+    <!--   Navbar Start-->
+    <header class="navBar">
+
+        <a href="../index.html">
+            <h1 class="title">Web Engineering</h1> <!--Title on the top left-->
+        </a>
+
+        <center>
+            <ul class="navList"> <!--navbar tabs-->
+                <li><a href="../index.html" class="navItem">HTML</a></li>
+                <li><a href="css.html" class="navItem">CSS</a></li>
+                <li><a href="javascript.html" class="navItem">Javascript</a></li>
+                <li><a href="php.html" class="navItem">PHP</a></li>
+                <li>
+                    <div class="dropDown"> <!--dropdown menu-->
+                        <button class="dropBtn"><a href="aboutUs.html">About Us</a></button> <!--about us tab that doubles as a dropdpown menu-->
+                        <div class="dropDownContent">
+                            <a class="dropDownOption" href="https://talalbafarat.github.io/SE371/Exercise1/" target="_blank">Talal Bafarat</a>
+                            <a class="dropDownOption" href="https://noureddin19.github.io/SE371/MyCV.htm" target="_blank">Noureddin Farahat</a>
+                            <a class="dropDownOption" href="https://acnaif.github.io/se371/" target="_blank">Naif Alfirm</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="contactUs.html" class="navItem">Contact Us</a></li>
+            </ul>
+        </center>
+
+    </header> <!--Navbar End-->
+
+    <div class="banner" id="bannerCSS"> <!--banner-->
+    </div>
+
+    <div class="content" id="CSSContainer"> <!--content container-->
+        <h2 class="contentHeader" id="CSSHeader1">CSS Code Snippets</h2> <!--Screenshots header-->
+
+        <center>
+            <img class="codeImage" src="../images/codeSnippet1.png" alt="code1" id="codeImg1"> <!--1st screemshot-->
+
+            <img class="codeImage" src="../images/codeSnippet2.png" alt="code2" id="codeImg2"> <!--2nd screenshot-->
+        </center>
+
+        <h2 class="contentHeader" id="CSSHeader2">Full Code</h2> <!--Text code header-->
+
+        <code class="codeContainer"> <!--code begins-->
+            <pre class="codeSnippet" id="CSSCode">body {
+    padding: 0;
+    margin: 0;
+    background-color: #F8F9F9;
+}
+
+/*---------------Navbar----------------*/
+
+.navBar {
+    top: 0; /*Keeps navBar on top*/
+    position: fixed;
+    width: 100%;
+    /*Makes color gradient for navBar*/
+    background: rgb(34, 193, 195);
+    background: linear-gradient(289deg, rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%);
+    opacity: 0.95;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 5px 0 #000;
+}
+
+.title {
+    font-family: righteous;
+    float: left; /*Keeps title on the same line as nav menu*/
+    margin: 0% -18% 0 2%; /*Keeps nav bar on the center*/
+    font-size: 2.5em;
+}
+
+a .title {
+    text-decoration: none; /*Remove default underlining*/
+    color: #000;
+}
+
+.navBar li {
+    display: inline; /*Keeps nav bar on ine line*/
+}
+
+.navBar li a {
+    text-decoration: none; /*Remove default underlining*/
+    margin: 1%; /*keeps a distance between navBar items*/
+    font-family: Lato;
+    font-size: 1.3em;
+    color: #000
+}
+
+.navItem:hover { /*nav item style during hover*/
+    opacity: 0.7; /*nav item looks transparent during hover*/
+    text-decoration: underline;
+    color: #fff;
+}
+
+.navBar li a:active { /*nav item style while being pressed*/
+    opacity: 1;
+}
+
+.navBar li a:visited { /*nav item style after visit*/
+    opacity: 0.9;
+}
+
+/*---------------Dropdown----------------*/
+
+/*Buttom for dropdow menu*/
+.dropBtn {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+}
+
+/* The container <div> - needed to position the dropDown content */
+.dropDown {
+    position: relative; /*Position relative to button*/
+    display: inline-block; /*Displays menu without changing position of anything else*/
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropDownContent {
+    display: none; /*Hides content*/
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; /*keeps content on top*/
+}
+
+/* Links inside the dropDown */
+.dropDownContent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none; /* no underline */
+    display: block;
+}
+
+/* Change color of dropDown links on hover */
+.dropDownContent a:hover {
+    background-color: #E5E7E9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Change color of dropDown links when active */
+.dropDownContent a:active {
+    background-color: d5d7d9;
+}
+
+/* Change color of dropDown links when visited */
+.dropDownContent a:visited {
+    color: darkslategray;
+}
+
+/* Show the dropDown menu on hover */
+.dropDown:hover .dropDownContent {
+    display: block;
+}
+
+/* Change the style of the dropDown button when the dropDown content is shown */
+.dropBtn a:hover {
+    color: #fff;
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+/*---------------Dropdown End----------------*/
+
+/*---------------Navbar End----------------*/
+
+/*---------------Banner----------------*/
+
+.banner { /* Keeps position on top (as a referance point) */
+    top: 0; 
+    width: 100%;
+    margin-top: 5%;
+    height: 350px;
+    background-image: url("../images/banner.jpg"); /* Default image */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Background covers the width of the page */
+}
+
+/* Banner for HTML page */
+#bannerHTML {
+    background-image: url("../images/bannerHTML.png");
+}
+
+/* Banner for CSS page */
+#bannerCSS {
+    background-image: url("../images/bannerCSS.jpeg");
+}
+
+/* Banner for Javascript page */
+#bannerJS {
+    background-image: url("../images/bannerJS.jpg");
+}
+
+/* Banner for PHP page */
+#bannerPHP {
+    background-image: url("../images/bannerPHP.png");
+}
+
+/*---------------Banner End----------------*/
+
+/*---------------Content----------------*/
+
+/* Main content of the page */
+.content {
+    box-shadow: 0 0 10px 0 #000;
+    margin: 0 0 0 0;
+    padding: 2% 5% 5% 5%;
+}
+
+.contentHeader { /* For the headings of content page */
+    font-family: lato;
+    font-size: 1.7em;
+    color: darkslategray;
+}
+
+.contentPara { /* For paragraphs */
+    font-family: lato;
+    font-size: 1.2em;
+}
+
+/*---------------Content End----------------*/
+
+/*---------------HTML Table----------------*/
+
+table {
+    border-collapse: collapse;
+}
+
+th { /* Table heading */
+    background-color: cadetblue;
+    border: 1px solid #fff;
+    color: #fff;
+    word-wrap: break-word; /* So long text won't escape */
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    font-family: lato;
+}
+
+tr:nth-child(even) {
+    background-color: #E5E7E9; /* For stribed table look */
+}
+
+/*---------------HTML Table End----------------*/
+
+/*---------------About Page----------------*/
+
+.CVContainer { /* contains CV iframe tag */
+    width: 90%;
+    height: 60%;
+    margin: 2%;
+}
+
+.CVLink {
+    text-decoration: none;
+    color: cadetblue;
+}
+
+.CVLink:hover {
+    opacity: 0.7;
+}
+
+/*---------------About Page End----------------*/
+
+
+/*---------------Contact form----------------*/
+
+input[type=text], /* text box styling */
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: lato;
+
+}
+
+input[type=submit] { /* submit button styling */
+    background-color: cadetblue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font: lato;
+
+}
+
+input[type=submit]:hover { /* submit button styling  (on hover)*/
+    opacity: 0.7;
+}
+
+input[type=submit]:active { /* submit button styling  (when active)*/
+    opacity: 0.5;
+}
+
+input[type=submit]:visited { /* submit button styling  (when visited)*/
+    opacity: 0.9;
+}
+
+label { /* label for form entry */
+    font-family: lato;
+}
+
+.mapContainer { /* container for map address */
+    border-radius: 1%; /* For rounded cornenrs */
+    margin-bottom: 2%;
+
+}
+
+.map { /* map */
+    width: 100%;
+    border-radius: 1%;
+    box-shadow: 2px 2px 10px 0px #999;
+}
+
+address { /*address*/
+    font-family: lato;
+    font-size: 1.2em;
+}
+
+/*---------------Contact form end----------------*/
+
+/*---------------Footer----------------*/
+
+footer {
+    background-color: #3D4849;
+    color: aliceblue;
+    margin-bottom: -5%;
+    padding: 2%;
+
+}
+
+#footerContentContainer { /* for footer content */
+    margin-left: 5%;
+    margin-right: 5%
+}
+
+.fa { /* social media icon properties */
+    padding: 10px;
+    font-size: 30px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    color: white;
+    border-radius: 50%;
+}
+
+.fa:hover { /* social media icon properties on hover */
+    opacity: 0.7;
+}
+
+.fa:active { /* social media icon properties on active */
+    opacity: 0.5;
+}
+
+.fa:visited { /* social media icon properties on visited */
+    opacity: 0.9;
+}
+
+.fa-linkedin { /* linked in color */
+    background-color: #007bb5;
+}
+
+.fa-github { /* github color */
+    background-color: #FFF;
+    color: #211F1F;
+}
+
+.fa-twitter { /* twitter color */
+    background-color: #55ACEE;
+}
+
+.fa-instagram { /* instagram color (with gradient) */
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, 
+    #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.contactLink { /* link for contact info on the bottom */
+    color: #fff;
+    display: inline; /* to keep a close distance */
+}
+
+.contactLink:hover { /* link for contact info on the bottom (on hover) */
+    opacity: 0.7;
+}
+
+.contactLink:active { /* link for contact info on the bottom (when pressed) */
+    opacity: 0.5;
+}
+
+.contactLink:visited { /* link for contact info on the bottom (when visited) */
+    opacity: 0.9;
+}
+
+.footerContact { /* styling for contact text on the bottom */
+    padding-bottom: 1%;
+    margin-left: 0.5%;
+    font-size: 110%;
+    vertical-align: top;
+    font-family: lato;
+}
+
+#address { /* styling address */
+    font-style: italic;
+}
+
+#copyright { /* styling copyright claim */
+    font-size: 75%;
+    font-family: lato;
+}
+
+/*---------------Footer End----------------*/
+
+}</pre>
+        </code> <!--code ends-->
+
+    </div> <!--content ends-->
+
+    <!--    Footer Start-->
+        <footer>
+
+            <div id="footerContentContainer">
+
+                <a href="https://www.linkedin.com/in/talal-b-94599b11b/" class="fa fa-linkedin fa-2x" target="_blank"></a> <!--LinkedIn Icon-->
+
+                <a href="https://github.com/TalalBafarat" class="fa fa-github fa-2x" target="_blank"></a> <!--Github Icon-->
+
+                <a href="https://twitter.com/TalalBafarat" class="fa fa-twitter fa-2x" target="_blank"></a> <!--Twitter Icon-->
+
+                <a href="https://www.instagram.com/talalbafarat/?hl=en" class="fa fa-instagram fa-2x" target="_blank"></a> <!--Instagram Icon-->
+
+                <br><br>
+
+                <a href="https://mailto:tbafarat@gmail.com" class="footerLink" target="_blank">
+                    <p class="contactLink"><i class="material-icons contactIcons">email</i> <span class="footerContact">tbafarat@gmail.com</span></p> <!--Email Link-->
+                </a>
+
+                <br><br>
+
+                <a href="https://goo.gl/maps/5kfj4DkLz8yGtUocA" class="footerLink" target="_blank">
+                    <p class="contactLink"><i class="material-icons contactIcons">business</i> <span class="footerContact" id="address"><address id="bottomAddress">12435 Salahuddin, Riyadh, SA</address></span></p> <!--Address Link-->
+                </a>
+
+                <br>
+                <hr>
+
+                <p id="copyright">2020 © Copyright by Talal Bafarat. All rights reserved</p> <!--Copyright Claim-->
+
+            </div>
+
+        </footer>
+        <!--    Footer end-->
+
+
+
+
+    </body>
+    <!--Body End-->
+
+    </html>

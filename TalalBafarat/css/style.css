@@ -1,0 +1,520 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F8F9F9;
+}
+
+/*---------------Navbar----------------*/
+
+.navBar {
+    top: 0;
+    /*Keeps navBar on top*/
+    position: fixed;
+    width: 100%;
+    background: rgb(34, 193, 195);
+    background: linear-gradient(289deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    /*Makes color gradient for navBar*/
+    opacity: 0.95;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 5px 0 #000;
+}
+
+.title {
+    font-family: righteous;
+    float: left;
+    /*Keeps title on the same line as nav menu*/
+    margin: 0% -18% 0 2%;
+    /*Keeps nav bar on the center*/
+    font-size: 2.5em;
+}
+
+a .title {
+    text-decoration: none;
+    /*Remove default underlining*/
+    color: #000;
+}
+
+.navBar li {
+    display: inline;
+    /*Keeps nav bar on ine line*/
+}
+
+.navBar li a {
+    text-decoration: none;
+    /*Remove default underlining*/
+    margin: 1%;
+    /*keeps a distance between navBar items*/
+    font-family: Lato;
+    font-size: 1.3em;
+    color: #000
+}
+
+.navItem:hover {
+    /*nav item style during hover*/
+    opacity: 0.7;
+    /*nav item looks transparent during hover*/
+    text-decoration: underline;
+    color: #fff;
+}
+
+.navBar li a:active {
+    /*nav item style while being pressed*/
+    opacity: 1;
+}
+
+.navBar li a:visited {
+    /*nav item style after visit*/
+    opacity: 0.9;
+}
+
+/*---------------Dropdown----------------*/
+
+/*Buttom for dropdow menu*/
+.dropBtn {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+}
+
+/* The container <div> - needed to position the dropDown content */
+.dropDown {
+    position: relative;
+    /*Position relative to button*/
+    display: inline-block;
+    /*Displays menu without changing position of anything else*/
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropDownContent {
+    display: none;
+    /*Hides content*/
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    /*keeps content on top*/
+}
+
+/* Links inside the dropDown */
+.dropDownContent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    /* no underline */
+    display: block;
+}
+
+/* Change color of dropDown links on hover */
+.dropDownContent a:hover {
+    background-color: #E5E7E9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Change color of dropDown links when active */
+.dropDownContent a:active {
+    background-color: d5d7d9;
+}
+
+/* Change color of dropDown links when visited */
+.dropDownContent a:visited {
+    color: darkslategray;
+}
+
+/* Show the dropDown menu on hover */
+.dropDown:hover .dropDownContent {
+    display: block;
+}
+
+/* Change the style of the dropDown button when the dropDown content is shown */
+.dropBtn a:hover {
+    color: #fff;
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+/*---------------Dropdown End----------------*/
+
+/*---------------Navbar End----------------*/
+
+/*---------------Banner----------------*/
+
+.banner {
+    /* Keeps position on top (as a referance point) */
+    top: 0;
+    width: 100%;
+    margin-top: 5%;
+    height: 350px;
+    background-image: url("../images/banner.jpg");
+    /* Default image */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* Background covers the width of the page */
+}
+
+/* Banner for HTML page */
+#bannerHTML {
+    background-image: url("../images/bannerHTML.png");
+}
+
+/* Banner for CSS page */
+#bannerCSS {
+    background-image: url("../images/bannerCSS.jpeg");
+}
+
+/* Banner for Javascript page */
+#bannerJS {
+    background-image: url("../images/bannerJS.jpg");
+}
+
+/* Banner for PHP page */
+#bannerPHP {
+    background-image: url("../images/bannerPHP.png");
+}
+
+/*---------------Banner End----------------*/
+
+/*---------------Content----------------*/
+
+/* Main content of the page */
+.content {
+    box-shadow: 0 0 10px 0 #000;
+    margin: 0 0 0 0;
+    padding: 2% 5% 5% 5%;
+}
+
+.contentHeader {
+    /* For the headings of content page */
+    font-family: lato;
+    font-size: 1.7em;
+    color: darkslategray;
+}
+
+.contentPara {
+    /* For paragraphs */
+    font-family: lato;
+    font-size: 1.2em;
+}
+
+.codeSnippet {
+    /*For code text*/
+    background-color: #E5E7E9;
+    padding: 1%;
+    font-size: 1.2em;
+}
+
+.codeImage {
+    /*For code screenshots*/
+    width: 90%;
+    margin: 1%;
+}
+
+.YouTubeLink {
+    /*For link to YouTube video*/
+    color: cadetblue;
+    text-decoration: none;
+}
+
+.YouTubeLink:hover {
+    /*For link to YouTube video on hover*/
+    opacity: 0.7;
+}
+
+.YouTubeLink:active {
+    /*For link to YouTube video when active*/
+    opacity: 0.5;
+}
+
+.YouTubeLink:visited {
+    /*For link to YouTube video after visit*/
+    opacity: 0.9;
+}
+
+/*---------------Content End----------------*/
+
+/*---------------HTML Table----------------*/
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    /* Table heading */
+    background-color: cadetblue;
+    border: 1px solid #fff;
+    color: #fff;
+    word-wrap: break-word;
+    /* So long text won't escape */
+}
+
+th,
+td {
+    padding: 8px;
+    font-family: lato;
+}
+
+tr:nth-child(even) {
+    background-color: #E5E7E9;
+    /* For striped table look */
+}
+
+/*---------------HTML Table End----------------*/
+
+/*---------------About Page----------------*/
+
+.CVContainer {
+    /* contains CV iframe tag */
+    width: 90%;
+    height: 60%;
+    margin: 2%;
+}
+
+.CVLink {
+    /*For link to CV page*/
+    text-decoration: none;
+    color: cadetblue;
+}
+
+.CVLink:hover {
+    /*For link to CV page on hover*/
+    opacity: 0.7;
+}
+
+/*---------------About Page End----------------*/
+
+
+/*---------------Contact form----------------*/
+
+input[type=text],
+/* text box styling */
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: lato;
+
+}
+
+input[type=submit] {
+    /* submit button styling */
+    background-color: cadetblue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font: lato;
+
+}
+
+input[type=submit]:hover {
+    /* submit button styling (on hover)*/
+    opacity: 0.7;
+}
+
+input[type=submit]:active {
+    /* submit button styling (when active)*/
+    opacity: 0.5;
+}
+
+input[type=submit]:visited {
+    /* submit button styling (when visited)*/
+    opacity: 0.9;
+}
+
+label {
+    /* label for form entry */
+    font-family: lato;
+}
+
+.mapContainer {
+    /* container for map address */
+    border-radius: 1%;
+    /* For rounded cornenrs */
+    margin-bottom: 2%;
+
+}
+
+.map {
+    /* map */
+    width: 100%;
+    border-radius: 1%;
+    box-shadow: 2px 2px 10px 0px #999;
+}
+
+address {
+    font-family: lato;
+}
+
+#contactAddress {
+    /*address under the map*/
+    font-size: 1.2em;
+}
+
+/*---------------Contact form end----------------*/
+
+/*---------------Footer----------------*/
+
+footer {
+    background-color: #3D4849;
+    color: aliceblue;
+    margin-bottom: -5%;
+    padding: 2%;
+
+}
+
+#footerContentContainer {
+    /* for footer content */
+    margin-left: 5%;
+    margin-right: 5%
+}
+
+.fa {
+    /* social media icon properties */
+    padding: 10px;
+    font-size: 30px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    color: white;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    /* social media icon properties on hover */
+    opacity: 0.7;
+}
+
+.fa:active {
+    /* social media icon properties when active */
+    opacity: 0.5;
+}
+
+.fa:visited {
+    /* social media icon properties when visited */
+    opacity: 0.9;
+}
+
+.fa-linkedin {
+    /* linkedin color */
+    background-color: #007bb5;
+}
+
+.fa-github {
+    /* github color */
+    background-color: #FFF;
+    color: #211F1F;
+}
+
+.fa-twitter {
+    /* twitter color */
+    background-color: #55ACEE;
+}
+
+.fa-instagram {
+    /* instagram color (with gradient) */
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.contactLink {
+    /* link for contact info on the bottom */
+    color: #fff;
+    display: inline;
+    /* to keep a close distance */
+}
+
+.contactLink:hover {
+    /* link for contact info on the bottom (on hover) */
+    opacity: 0.7;
+}
+
+.contactLink:active {
+    /* link for contact info on the bottom (when pressed) */
+    opacity: 0.5;
+}
+
+.contactLink:visited {
+    /* link for contact info on the bottom (when visited) */
+    opacity: 0.9;
+}
+
+.footerContact {
+    /* styling for contact text on the bottom */
+    padding-bottom: 1%;
+    margin-left: 0.5%;
+    font-size: 110%;
+    vertical-align: top;
+    font-family: lato;
+}
+
+#copyright {
+    /* styling copyright claim */
+    font-size: 75%;
+    font-family: lato;
+}
+
+.FooterLink {
+    /*For link in the footer*/
+    text-decoration: none;
+    color: #fff;
+}
+
+.FooterLink address {
+    /*For address link in the footer*/
+    font-size: 110%;
+}
+
+.FooterLink:hover {
+    /*For address link in the footer (on hover)*/
+    opacity: 0.7;
+}
+
+.FooterLink:active {
+    /*For address link in the footer (when active)*/
+    opacity: 0.5;
+}
+
+.FooterLink:visited {
+    /*For address link in the footer (when visited)*/
+    opacity: 0.9;
+}
+
+#bottomAddress {
+    display: inline;
+    /*to keep the address inline with the icon*/
+}
+
+/*---------------Footer End----------------*/
+
+
+@media (max-width: 1250px) {
+
+    /*Adjust page for smaller screens*/
+    .title {
+        /*remove title to save space*/
+        display: none;
+    }
+
+    .banner {
+        margin-top: 6%;
+    }
+
+    .codeSnippet {
+        font-size: 1em;
+
+    }
+}
