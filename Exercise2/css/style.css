@@ -47,20 +47,36 @@ a .title {
     /*keeps a distance between navBar items*/
     font-family: Lato;
     font-size: 1.3em;
-    color: #000
+    color: #000;
+    animation-name: colorFadeBack;
+    animation-duration: 0.3s;
+}
+
+/*Animations that fade color*/
+@keyframes colorFade {
+  from {color: #000;}
+  to {color: #fff;}
+}
+
+@keyframes colorFadeBack {
+  from {color: #fff;}
+  to {color: #000;}
+}
+
+.navItem {
 }
 
 .navItem:hover {
     /*nav item style during hover*/
-    opacity: 0.7;
     /*nav item looks transparent during hover*/
-    text-decoration: underline;
+    animation-name: colorFade;
+    animation-duration: 0.3s;
     color: #fff;
 }
 
 .navBar li a:active {
     /*nav item style while being pressed*/
-    opacity: 1;
+    opacity: 0.7;
 }
 
 .navBar li a:visited {
@@ -103,7 +119,6 @@ a .title {
 .dropDownContent a {
     color: black;
     padding: 12px 16px;
-    text-decoration: none;
     /* no underline */
     display: block;
 }
@@ -133,8 +148,16 @@ a .title {
 /* Change the style of the dropDown button when the dropDown content is shown */
 .dropBtn a:hover {
     color: #fff;
+    animation-name: colorFade;
+    animation-duration: 0.3s;
+}
+
+.dropBtn a:active {
     opacity: 0.7;
-    text-decoration: underline;
+}
+
+.dropBtn a:visited {
+    opacity: 0.9;
 }
 
 /*---------------Dropdown End----------------*/
@@ -269,9 +292,13 @@ tr:nth-child(even) {
 
 .CVContainer {
     /* contains CV iframe tag */
-    width: 90%;
-    height: 60%;
+    width: 80%;
+    height: 70%;
     margin: 2%;
+    border: none;
+    border-radius: 1%;
+    box-shadow: 2px 2px 10px 0px #999;
+    
 }
 
 .CVLink {
@@ -380,6 +407,17 @@ footer {
     margin-right: 5%
 }
 
+/*Animations that fade opacity*/
+@keyframes opacityFade {
+  from {opacity: 1;}
+  to {opacity: 0.7;}
+}
+
+@keyframes opacityFadeBack {
+  from {opacity: 0.7;}
+  to {opacity: 1;}
+}
+
 .fa {
     /* social media icon properties */
     padding: 10px;
@@ -391,10 +429,14 @@ footer {
     margin: 5px 2px;
     color: white;
     border-radius: 50%;
+    animation-name: opacityFadeBack;
+    animation-duration: 0.3s;
 }
 
 .fa:hover {
     /* social media icon properties on hover */
+    animation-name: opacityFade;
+    animation-duration: 0.3s;
     opacity: 0.7;
 }
 
