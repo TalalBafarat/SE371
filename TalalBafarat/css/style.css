@@ -262,10 +262,6 @@ a .title {
 
 /*---------------HTML Table----------------*/
 
-table {
-    border-collapse: collapse;
-}
-
 th {
     /* Table heading */
     background-color: cadetblue;
