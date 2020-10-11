@@ -269,7 +269,6 @@ table {
 th {
     /* Table heading */
     background-color: cadetblue;
-    border: 1px solid #fff;
     color: #fff;
     word-wrap: break-word;
     /* So long text won't escape */
@@ -281,7 +280,7 @@ td {
     font-family: lato;
 }
 
-tr:nth-child(even) {
+tr:nth-child(odd) {
     background-color: #E5E7E9;
     /* For striped table look */
 }
