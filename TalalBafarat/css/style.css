@@ -474,21 +474,6 @@ footer {
     /* to keep a close distance */
 }
 
-.contactLink:hover {
-    /* link for contact info on the bottom (on hover) */
-    opacity: 0.7;
-}
-
-.contactLink:active {
-    /* link for contact info on the bottom (when pressed) */
-    opacity: 0.5;
-}
-
-.contactLink:visited {
-    /* link for contact info on the bottom (when visited) */
-    opacity: 0.9;
-}
-
 .footerContact {
     /* styling for contact text on the bottom */
     padding-bottom: 1%;
@@ -504,29 +489,33 @@ footer {
     font-family: lato;
 }
 
-.FooterLink {
-    /*For link in the footer*/
+.footerLink > *{
+    /*For link in the footer and all children*/
     text-decoration: none;
     color: #fff;
+    animation-name: opacityFadeBack;
+    animation-duration: 0.3s;
 }
 
-.FooterLink address {
+.footerLink address {
     /*For address link in the footer*/
     font-size: 110%;
 }
 
-.FooterLink:hover {
-    /*For address link in the footer (on hover)*/
+.footerLink:hover > *{
+    /*For address link in the footer (on hover) with all children*/
     opacity: 0.7;
+    animation-name: opacityFade;
+    animation-duration: 0.3s;
 }
 
-.FooterLink:active {
-    /*For address link in the footer (when active)*/
+.footerLink:active > *{
+    /*For address link in the footer (when active) with all children*/
     opacity: 0.5;
 }
 
-.FooterLink:visited {
-    /*For address link in the footer (when visited)*/
+.footerLink:visited > *{
+    /*For address link in the footer (when visited) with all children*/
     opacity: 0.9;
 }
 
@@ -534,7 +523,6 @@ footer {
     display: inline;
     /*to keep the address inline with the icon*/
 }
-
 /*---------------Footer End----------------*/
 
 
