@@ -489,6 +489,11 @@ footer {
     font-family: lato;
 }
 
+.footerLink {
+    /*Remove underlining from email*/
+    text-decoration: none;
+}
+
 .footerLink > *{
     /*For link in the footer and all children*/
     text-decoration: none;
